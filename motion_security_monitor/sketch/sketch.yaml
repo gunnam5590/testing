@@ -1,0 +1,30 @@
+# Arduino CLI sketch project file for sketch/sketch.ino
+#
+# This declares the target board and the libraries the sketch depends on,
+# so builds are reproducible whether you're building through App Lab or
+# via the Arduino CLI / arduino-app-cli directly.
+#
+# Arduino_RouterBridge (the Bridge library used in sketch.ino) ships
+# pre-installed with App Lab and pulls in the libraries below as its own
+# dependencies -- they're listed explicitly here so a CLI-only build
+# (outside App Lab) has everything it needs. No extra libraries are
+# required for the PIR/ultrasonic/buzzer code itself: digitalRead,
+# pulseIn, and tone are core functions.
+#
+# NOTE: App Lab currently does not support editing this file from its
+# UI -- if you add a library there via "Add Library", App Lab writes it
+# here for you. If you're editing sketch.yaml by hand for a CLI-based
+# workflow instead, this is the file to update.
+
+profiles:
+  default:
+    fqbn: arduino:zephyr:unoq
+    platforms:
+      - platform: arduino:zephyr
+    libraries:
+      - MsgPack (0.4.2)
+      - DebugLog (0.8.4)
+      - ArxContainer (0.7.0)
+      - ArxTypeTraits (0.3.1)
+
+default_profile: default

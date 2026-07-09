@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Motion Security Monitor</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚨 Motion Security Monitor</h1>
+    <div id="badges">
+      <span id="badge-motion" class="badge off">Motion: idle</span>
+      <span id="badge-person" class="badge off">Person: none</span>
+      <span id="badge-distance" class="badge off">Distance: -- cm</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="video-panel">
+      <h2>Live Camera</h2>
+      <div id="video-wrap">
+        <iframe id="video-frame" title="camera feed"></iframe>
+      </div>
+    </section>
+
+    <section id="log-panel">
+      <h2>Event Log</h2>
+      <div id="log-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
